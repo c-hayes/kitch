@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Kitch to Victory!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f8d50cbe91.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="index.html"> <img src="./assets/logo.png" alt="Brand Logo"></a>
+        <ul>
+            <li><a href="#preorder" onclick="toggleModal()">Pre-Order</a> </li>
+            <li><a href="./about.html">About</a> </li>
+            <li><button class="btn__mailing">Mailing List</button></li>
+        </ul>
+    </header>
+    <section class="landing flex">
+        <img class="landing--img" src="./assets/smoke.png">
+        <h1>KITCH</h1>
+        <img src="./assets/img-figures.png" alt="Shadowy Figures">
+        <h2>TO VICTORY</h2>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Preorder your copy today!</h3>
+                <h4 class="modal__subitle modal__subtitle--about">$49.99</h4>
+                <p class="modal__para">By preordering your copy today, you are guarenteed signed first editions, behind the scenes concept art, and early notice on future projects.</p>
+                
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+
+                <h3 class="modal__title modal__title--contact"> I'm ready to place my Order</h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                      </div>
+                      <button id="contact__submit" class="form__submit">
+                        Continue to Purchase
+                      </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner logo--white"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for reaching out.  I look forward to talking with you soon!
+                </div>
+
+            </div>
+          </div>
+    </section>
+    <section class="about flex">
+        <div class="container flex">
+            <div class="width-50">
+                <h2>Coming soon</h2>
+                <p>The harrowing graphic novel of ...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fugiat similique quos nobis ut dolor amet hic! Magni, a culpa.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ullam pariatur, laudantium sunt sint beatae fugiat blanditiis eos animi tempore?</p>
+            </div>
+            <div class="width-50">
+                <img src="./assets/318149627_10226580260040465_8824898277764596572_n.jpeg">
+            </div>
+        </div>
+    </section>
+    <section class="preorder flex">
+        <div class="container flex">
+            <div class="width-50">
+                <img src="./assets/conceptart.png">
+            </div>
+            <div class="width-50">
+                <h2>Preorder your copy today</h2>
+                <p>When you preorder you get behind the scenes concept art, regular updates, etc </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ullam pariatur, laudantium sunt sint beatae fugiat blanditiis eos animi tempore?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ullam pariatur, laudantium sunt sint beatae fugiat blanditiis eos animi tempore?</p>
+                <a href="#"> <button class="btn__preorder" onclick="toggleModal()">Preorder today</button></a>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <a href="#" class="footer__anchor">
+                <figure>
+                    <img src="./assets/logo.png" alt="Creative Logo">
+                </figure>
+                <span class="footer__anchor--popper">
+                    Top
+                    <i class="fas fa-arrow-up"></i>
+                </span>
+            </a>
+            <div class="footer__social--list">
+                <a href="facebook.com" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >Facebook</a>
+           
+                <a href="instagram.com" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >Instagram</a>
+           
+                <a href="tiktok.com" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >TikTok</a>
+           
+                <a href="#" onclick="toggleModal()" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                >Contact</a>
+            </div>
+            <p>Copyright ©2022 Churchill Creative</p>
+        </div>
+    </footer>
+</body>
+</html>
